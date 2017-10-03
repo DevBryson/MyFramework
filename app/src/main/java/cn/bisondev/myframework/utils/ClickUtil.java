@@ -17,7 +17,7 @@ public class ClickUtil {
     /**
      * 判断两次点击的间隔，如果小于1000，则认为是多次无效点击
      *
-     * @return
+     * @return {@code true}: 是<br>{@code false}: 否
      */
     public static boolean isFastDoubleClick() {
         return isFastDoubleClick(-1, DIFF);
@@ -26,7 +26,7 @@ public class ClickUtil {
     /**
      * 判断两次点击的间隔，如果小于1000，则认为是多次无效点击
      *
-     * @return
+     * @return {@code true}: 是<br>{@code false}: 否
      */
     public static boolean isFastDoubleClick(int buttonId) {
         return isFastDoubleClick(buttonId, DIFF);
@@ -36,7 +36,7 @@ public class ClickUtil {
      * 判断两次点击的间隔，如果小于diff，则认为是多次无效点击
      *
      * @param diff
-     * @return
+     * @return {@code true}: 是<br>{@code false}: 否
      */
     public static boolean isFastDoubleClick(int buttonId, long diff) {
         long time = System.currentTimeMillis();

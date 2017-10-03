@@ -74,7 +74,7 @@ public class DateUtil {
      * 按照指定的文本格式返回当前时间
      *
      * @param format 默认格式：yyyy-MM-dd HH:mm:ss
-     * @return
+     * @return 按照yyyy-MM-dd HH:mm:ss格式转换后的当前时间
      */
     public static String getDateStr(String format) {
         if (format == null || "".equals(format)) {
@@ -87,8 +87,8 @@ public class DateUtil {
      * 转换时间戳为月日<br>
      * 将服务器获取的10位时间戳String时间转换成long类型*1000+"" 在转换成日期格式的string
      *
-     * @param str
-     * @return
+     * @param str 服务器获取的10位时间戳String时间
+     * @return 格式MM月dd日的时间
      */
     public static String toTime1(String str) {
         long time = Long.parseLong(str) * 1000;
@@ -136,8 +136,8 @@ public class DateUtil {
      * 转换时间戳为2016.3.25<br>
      * 将服务器获取的10位时间戳String时间转换成long类型*1000+"" 在转换成日期格式的string
      *
-     * @param str
-     * @return
+     * @param str 服务器获取的10位时间戳String时间
+     * @return 格式为yyyy.MM.dd的时间
      */
     public static String toTime5(String str) {
         long time = Long.parseLong(str) * 1000;
@@ -150,7 +150,7 @@ public class DateUtil {
     /**
      * 转换时间戳为2016-3-25<br>
      *
-     * @return
+     * @return 格式为yyyy-MM-dd的时间
      */
     public static String toTime6(Long time) {
         SimpleDateFormat format = new SimpleDateFormat(DATE_FORMAT);
