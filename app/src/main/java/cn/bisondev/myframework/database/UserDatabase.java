@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import cn.bisondev.myframework.utils.GlobalManager;
+import cn.bisondev.myframework.common.utils.GlobalManager;
 
 /**
  * SQLiteOpenHelper的继承子类，建立数据库

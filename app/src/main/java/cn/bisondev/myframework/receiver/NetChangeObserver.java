@@ -1,6 +1,6 @@
 package cn.bisondev.myframework.receiver;
 
-import cn.bisondev.myframework.utils.NetStateUtils;
+import cn.bisondev.myframework.common.utils.NetStateUtils;
 
 /**
  * 网络改变观察者，观察网络改变后回调的方法

@@ -10,4 +10,6 @@
     <color name="colorSecondText">#757575</color>
     <color name="colorDivider">#BDBDBD</color>
 
+    <color name="gray">#8c8c8c</color>
+    <color name="gray_deep">#5c5c5c</color>
 </resources>

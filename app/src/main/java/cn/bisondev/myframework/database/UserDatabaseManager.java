@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.bisondev.myframework.bean.User;
-import cn.bisondev.myframework.utils.GlobalManager;
+import cn.bisondev.myframework.common.utils.GlobalManager;
 
 /**
  *

@@ -8,7 +8,7 @@ import android.util.Log;
 
 import java.util.ArrayList;
 
-import cn.bisondev.myframework.utils.NetStateUtils;
+import cn.bisondev.myframework.common.utils.NetStateUtils;
 
 /**
  * 网络状态的广播监听类

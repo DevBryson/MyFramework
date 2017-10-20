@@ -2,16 +2,20 @@ package cn.bisondev.myframework;
 
 import android.app.Application;
 import android.content.Context;
+import android.os.Handler;
+import android.os.Process;
 
 import cn.bisondev.myframework.receiver.NetStateReceiver;
-import cn.bisondev.myframework.utils.CrashHandler;
+import cn.bisondev.myframework.common.utils.CrashHandler;
+import cn.bisondev.myframework.service.InitializeService;
 
 /**
  * Created by Basil on 2016/9/18.
  */
 public class MyApplication extends Application {
 
-    private static Context mContext;
+    public static Handler mHandler;
+    public static int mainThreadID;
 
     @Override
     public void onCreate() {
@@ -25,7 +29,11 @@ public class MyApplication extends Application {
          * 注册监听网络变化的BroadcastReceiver
          */
         NetStateReceiver.registerNetworkStateReceiver(this);
-        mContext = this;
+
+        mHandler = new Handler();            //handler
+        mainThreadID = Process.myTid();     //主线程id
+
+        InitializeService.start(this);
     }
 
     @Override
@@ -38,7 +46,15 @@ public class MyApplication extends Application {
         android.os.Process.killProcess(android.os.Process.myPid());
     }
 
-    public static Context getContext() {
-        return mContext;
+    public static Handler getHandler() {
+        return mHandler;
+    }
+
+    /**
+     * 获取主线程id
+     * @return
+     */
+    public static int getMainThreadID() {
+        return mainThreadID;
     }
 }
